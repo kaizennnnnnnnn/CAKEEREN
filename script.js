@@ -224,6 +224,35 @@ if (petsSection) {
 
 petsTargetProg = calcPetsProgress();
 
+/* ── Mobile nav — hamburger toggle ─────────────────────────── */
+const hamburger  = document.getElementById('navHamburger');
+const mobileNav  = document.getElementById('navMobile');
+const mobileClose = document.getElementById('navMobileClose');
+
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileNav.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileNav.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  mobileClose.addEventListener('click', closeMobileNav);
+
+  mobileNav.querySelectorAll('.nav-mobile-link').forEach((link) => {
+    link.addEventListener('click', closeMobileNav);
+  });
+}
+
 /* ── Marquee — pause on hover ───────────────────────────────── */
 const marqueeTrack = document.querySelector('.marquee-track');
 

@@ -378,6 +378,14 @@ body {
   object-position: center;
 }
 
+/* Bento card real photos */
+.cake-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Hero cake — warm ivory to caramel */
 .cake-hero {
   background:
@@ -1272,6 +1280,102 @@ body {
 }
 
 /* ============================================================
+   Mobile Navigation — Hamburger + Overlay
+   ============================================================ */
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 110;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 253, 249, 0.9);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-out), opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.nav.scrolled .nav-hamburger span {
+  background: var(--text);
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Full-screen mobile overlay */
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 105;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+
+.nav-mobile.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-mobile-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.375rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+}
+
+.nav-mobile-link {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  transition: color 0.2s ease;
+}
+
+.nav-mobile-link:hover {
+  color: var(--accent);
+}
+
+.nav-mobile-cta {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--surface) !important;
+  background: var(--accent);
+  padding: 0.85rem 2.25rem;
+  border-radius: var(--r-full);
+  letter-spacing: 0.01em;
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 
@@ -1359,35 +1463,92 @@ body {
 }
 
 @media (max-width: 640px) {
+  /* Nav */
   .nav {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
   }
 
-  .nav-links li:not(:last-child) {
+  .nav-links {
     display: none;
   }
 
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* Hero */
   .hero {
-    padding: 7rem 1.5rem 3.5rem;
+    padding: 6rem 1.25rem 3rem;
+    min-height: 100dvh;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2.75rem, 11vw, 4rem);
+  }
+
+  .hero-body {
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-right {
+    display: none; /* hide image on mobile — hero text fills viewport */
   }
 
   .hero-scroll-indicator {
-    left: 1.5rem;
+    left: 1.25rem;
   }
 
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Pets section */
+  .pets-panel {
+    top: auto;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 5rem;
+    transform: translateY(16px);
+    width: auto;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .pets-panel.active {
+    transform: translateY(0);
+  }
+
+  .pets-heading {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .pets-body {
+    font-size: 0.9375rem;
+  }
+
+  .pets-dots {
+    bottom: 1.75rem;
+    right: 1.25rem;
+  }
+
+  /* Collection */
   .collection,
   .craft,
   .order-cta {
-    padding: 4rem 1.5rem;
-  }
-
-  .menu-inner {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1.25rem;
   }
 
   .bento-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 280px);
+    grid-template-rows: repeat(4, 260px);
+    gap: 0.625rem;
   }
 
   .bento-large,
@@ -1398,12 +1559,24 @@ body {
     grid-row: auto;
   }
 
+  /* Craft */
   .craft-quote {
     padding-right: 0;
+    font-size: 1.25rem;
   }
 
   .craft-number {
     display: none;
+  }
+
+  /* Menu */
+  .menu-inner {
+    padding: 3.5rem 1.25rem;
+  }
+
+  /* CTA */
+  .cta-heading {
+    font-size: clamp(2.5rem, 11vw, 4rem);
   }
 
   .cta-actions {
@@ -1412,8 +1585,9 @@ body {
     gap: 1rem;
   }
 
+  /* Footer */
   .footer {
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 3rem 1.25rem 1.5rem;
   }
 
   .footer-links {
@@ -1425,5 +1599,12 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+
+  /* General touch targets */
+  .btn-primary,
+  .btn-outline {
+    padding: 0.875rem 1.75rem;
+    min-height: 48px;
   }
 }

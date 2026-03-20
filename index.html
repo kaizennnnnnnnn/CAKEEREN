@@ -23,7 +23,19 @@
       <li><a href="#menu">Menu</a></li>
       <li><a href="#order" class="nav-cta magnetic-btn">Order <span aria-hidden="true">→</span></a></li>
     </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- ── Mobile Nav Overlay ── -->
+  <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <button class="nav-mobile-close" id="navMobileClose" aria-label="Close menu">✕</button>
+    <a href="#about"      class="nav-mobile-link">Our Story</a>
+    <a href="#collection" class="nav-mobile-link">Collection</a>
+    <a href="#menu"       class="nav-mobile-link">Menu</a>
+    <a href="#order"      class="nav-mobile-link nav-mobile-cta">Order a Cake →</a>
+  </div>
 
   <!-- ── Hero ── -->
   <section class="hero" id="home">
@@ -184,9 +196,9 @@
     <div class="bento-grid">
 
       <div class="bento-card bento-large reveal">
-        <div class="cake-visual cake-1"></div>
+        <div class="cake-visual"><img src="cake2.jpeg" alt="Raspberry & Rose cake" class="cake-img"></div>
         <div class="cake-info">
-          <h3>Raspberry &amp; Rose</h3>
+          <h3>Salted Caramel &amp; Praline</h3>
           <p>Vanilla génoise, rose water cream, fresh raspberries</p>
           <span class="price">from £85</span>
         </div>
@@ -194,7 +206,7 @@
       </div>
 
       <div class="bento-card bento-top-mid reveal-up">
-        <div class="cake-visual cake-2"></div>
+        <div class="cake-visual"><img src="cake3.png" alt="Dark Chocolate Forest cake" class="cake-img"></div>
         <div class="cake-info">
           <h3>Dark Chocolate Forest</h3>
           <p>70% Valrhona, cherry compote, kirsch cream</p>
@@ -203,7 +215,7 @@
       </div>
 
       <div class="bento-card bento-top-right reveal-up">
-        <div class="cake-visual cake-3"></div>
+        <div class="cake-visual"><img src="cake4.png" alt="Earl Grey & Citrus cake" class="cake-img"></div>
         <div class="cake-info">
           <h3>Earl Grey &amp; Citrus</h3>
           <p>Bergamot sponge, yuzu curd</p>
@@ -212,9 +224,9 @@
       </div>
 
       <div class="bento-card bento-bottom-wide reveal">
-        <div class="cake-visual cake-4"></div>
+        <div class="cake-visual"><img src="cake1.jpeg" alt="Salted Caramel & Praline cake" class="cake-img"></div>
         <div class="cake-info">
-          <h3>Salted Caramel &amp; Praline</h3>
+          <h3>Raspberry &amp; Rose</h3>
           <p>Brown butter sponge, salted caramel, feuilletine crunch, fleur de sel</p>
           <span class="price">from £80</span>
         </div>
