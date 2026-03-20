@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirabelle — Artisan Cakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Grain texture overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo">Mirabelle</a>
+    <ul class="nav-links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order" class="nav-cta magnetic-btn">Order <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="home">
+    <video class="hero-bg-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="interior-cake.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <span class="hero-eyebrow reveal">Est. 2019 · Artisan Cakery · London</span>
+        <h1 class="hero-heading reveal">
+          Where every<br>
+          <em>layer</em><br>
+          tells a story.
+        </h1>
+        <p class="hero-body reveal">
+          Handcrafted cakes made with seasonal ingredients,<br>
+          designed to mark life's most meaningful moments.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#collection" class="btn-primary magnetic-btn">Explore Collection</a>
+          <a href="#about" class="btn-ghost">Our Philosophy →</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-bg-circle" aria-hidden="true"></div>
+        <div class="hero-cake-frame">
+          <img src="lemon.jpeg" alt="Elderflower & Lemon cake" class="hero-cake-img">
+          <div class="hero-badge reveal-up">
+            <span class="badge-label">Season's Pick</span>
+            <span class="badge-name">Elderflower &amp; Lemon</span>
+          </div>
+        </div>
+        <div class="hero-stat reveal-up">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Cakes crafted weekly</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── Marquee ── -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Artisan Baking</span><span class="marquee-sep">·</span>
+      <span>Seasonal Flavours</span><span class="marquee-sep">·</span>
+      <span>Custom Occasions</span><span class="marquee-sep">·</span>
+      <span>Made With Love</span><span class="marquee-sep">·</span>
+      <span>Artisan Baking</span><span class="marquee-sep">·</span>
+      <span>Seasonal Flavours</span><span class="marquee-sep">·</span>
+      <span>Custom Occasions</span><span class="marquee-sep">·</span>
+      <span>Made With Love</span><span class="marquee-sep">·</span>
+    </div>
+  </div>
+
+  <!-- ── Pet-Friendly Scroll Scrubber ── -->
+  <section class="pets-scroll" id="pets">
+    <div class="pets-sticky">
+
+      <video class="pets-video" id="petsVideo" muted playsinline preload="auto">
+        <source src="eren-licking.mp4" type="video/mp4">
+      </video>
+
+      <!-- Dark gradient so text is readable -->
+      <div class="pets-video-overlay" aria-hidden="true"></div>
+
+      <!-- Text overlaid on video -->
+      <div class="pets-overlay-panels">
+
+        <div class="pets-panel active" data-panel="0">
+          <span class="section-label">For the Whole Family</span>
+          <h2 class="pets-heading">
+            Cakes crafted<br>
+            for every<br>
+            <em>good boy.</em>
+          </h2>
+          <p class="pets-body">
+            Our jelly cakes are made with your four-legged family members in mind — the same artisan care, with ingredients completely safe for dogs and cats.
+          </p>
+        </div>
+
+        <div class="pets-panel" data-panel="1">
+          <span class="section-label">Nothing to Hide</span>
+          <h2 class="pets-heading">
+            Zero sugar.<br>
+            Zero <em>xylitol.</em><br>
+            Zero worry.
+          </h2>
+          <p class="pets-body">
+            No chocolate, no grapes, no artificial sweeteners. Just natural gelatin, pet-safe fruit, and wholesome broth bases — reviewed by veterinary nutritionists.
+          </p>
+        </div>
+
+        <div class="pets-panel" data-panel="2">
+          <span class="section-label">Joint &amp; Coat Health</span>
+          <h2 class="pets-heading">
+            Natural gelatin.<br>
+            <em>Naturally</em><br>
+            good for them.
+          </h2>
+          <p class="pets-body">
+            Gelatin is pure collagen — the same protein that supports healthy joints, flexible cartilage, and a shiny coat. Every slice works a little harder than it looks.
+          </p>
+        </div>
+
+        <div class="pets-panel" data-panel="3">
+          <span class="section-label">Light &amp; Balanced</span>
+          <h2 class="pets-heading">
+            All the joy.<br>
+            <em>None</em> of<br>
+            the guilt.
+          </h2>
+          <p class="pets-body">
+            Without refined sugar or fat-heavy cream, our pet jelly cakes are low in calories — so you can celebrate freely without worrying about their waistline.
+          </p>
+        </div>
+
+        <div class="pets-panel" data-panel="4">
+          <span class="section-label">Their Moment Too</span>
+          <h2 class="pets-heading">
+            Every birthday<br>
+            <em>deserves</em><br>
+            a celebration.
+          </h2>
+          <p class="pets-body">
+            Custom shapes, flavours they love, designed to match their personality. Order alongside your own cake — because no one should be left out of the party.
+          </p>
+          <a href="#order" class="btn-primary pets-cta magnetic-btn">Order a Pet Cake</a>
+        </div>
+
+      </div>
+
+      <!-- Progress & dots -->
+      <div class="pets-progress-track" aria-hidden="true">
+        <div class="pets-progress-fill" id="petsProgressFill"></div>
+      </div>
+      <div class="pets-dots" aria-hidden="true">
+        <span class="pets-dot active" data-dot="0"></span>
+        <span class="pets-dot" data-dot="1"></span>
+        <span class="pets-dot" data-dot="2"></span>
+        <span class="pets-dot" data-dot="3"></span>
+        <span class="pets-dot" data-dot="4"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Signature Collection (Bento Grid) ── -->
+  <section class="collection" id="collection">
+    <div class="section-header">
+      <span class="section-label reveal">The Collection</span>
+      <h2 class="section-title reveal">Signature Creations</h2>
+    </div>
+    <div class="bento-grid">
+
+      <div class="bento-card bento-large reveal">
+        <div class="cake-visual cake-1"></div>
+        <div class="cake-info">
+          <h3>Raspberry &amp; Rose</h3>
+          <p>Vanilla génoise, rose water cream, fresh raspberries</p>
+          <span class="price">from £85</span>
+        </div>
+        <span class="cake-tag">Bestseller</span>
+      </div>
+
+      <div class="bento-card bento-top-mid reveal-up">
+        <div class="cake-visual cake-2"></div>
+        <div class="cake-info">
+          <h3>Dark Chocolate Forest</h3>
+          <p>70% Valrhona, cherry compote, kirsch cream</p>
+          <span class="price">from £75</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-top-right reveal-up">
+        <div class="cake-visual cake-3"></div>
+        <div class="cake-info">
+          <h3>Earl Grey &amp; Citrus</h3>
+          <p>Bergamot sponge, yuzu curd</p>
+          <span class="price">from £70</span>
+        </div>
+      </div>
+
+      <div class="bento-card bento-bottom-wide reveal">
+        <div class="cake-visual cake-4"></div>
+        <div class="cake-info">
+          <h3>Salted Caramel &amp; Praline</h3>
+          <p>Brown butter sponge, salted caramel, feuilletine crunch, fleur de sel</p>
+          <span class="price">from £80</span>
+        </div>
+        <span class="cake-tag cake-tag--new">New</span>
+      </div>
+
+    </div>
+    <div class="collection-footer reveal">
+      <a href="#menu" class="btn-outline magnetic-btn">View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- ── Craft / About ── -->
+  <section class="craft" id="about">
+    <div class="craft-inner">
+      <div class="craft-left">
+        <div class="craft-number" aria-hidden="true">02</div>
+        <span class="section-label reveal">The Craft</span>
+        <blockquote class="craft-quote reveal">
+          "We bake what we believe — that a cake is never just a cake. It is time, intention, and the quiet language of care."
+        </blockquote>
+        <div class="craft-details reveal-up">
+          <p>Every Mirabelle cake begins with a conversation. We source from local farms, work with seasonal produce, and refuse shortcuts. Our process takes days, not hours — because the best things always do.</p>
+          <div class="craft-values">
+            <div class="value-item">
+              <span class="value-num">100%</span>
+              <span class="value-desc">Locally sourced butter &amp; eggs</span>
+            </div>
+            <div class="value-item">
+              <span class="value-num">72h</span>
+              <span class="value-desc">Minimum lead time per cake</span>
+            </div>
+            <div class="value-item">
+              <span class="value-num">Zero</span>
+              <span class="value-desc">Artificial flavourings or colours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="craft-right">
+        <div class="craft-image reveal-right">
+          <div class="cake-visual cake-craft"></div>
+          <div class="craft-image-caption">Hand-decorated, always.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Menu ── -->
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <span class="section-label reveal">What We Offer</span>
+        <h2 class="section-title reveal">The Menu</h2>
+      </div>
+      <div class="menu-grid">
+
+        <div class="menu-category reveal">
+          <h3 class="category-title">Celebration Cakes</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Classic Victoria</span>
+                <span class="item-desc">Strawberry jam, vanilla buttercream</span>
+              </div>
+              <span class="item-price">£65</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Lemon Drizzle Layer</span>
+                <span class="item-desc">Lemon curd, mascarpone, candied zest</span>
+              </div>
+              <span class="item-price">£70</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Raspberry &amp; Rose</span>
+                <span class="item-desc">Rose water, fresh berries, génoise</span>
+              </div>
+              <span class="item-price">£85</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Dark Chocolate Forest</span>
+                <span class="item-desc">Valrhona, cherry compote, kirsch</span>
+              </div>
+              <span class="item-price">£75</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal-up">
+          <h3 class="category-title">Seasonal Specials</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Elderflower &amp; Lemon <span class="item-season">Spring</span></span>
+                <span class="item-desc">St-Germain sponge, lemon mousse</span>
+              </div>
+              <span class="item-price">£90</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Strawberry Basil <span class="item-season">Summer</span></span>
+                <span class="item-desc">Garden basil, macerated strawberries</span>
+              </div>
+              <span class="item-price">£85</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Fig &amp; Honey <span class="item-season">Autumn</span></span>
+                <span class="item-desc">Roasted figs, wildflower honey, walnut</span>
+              </div>
+              <span class="item-price">£80</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Spiced Pear <span class="item-season">Winter</span></span>
+                <span class="item-desc">Poached pear, cardamom, dark caramel</span>
+              </div>
+              <span class="item-price">£80</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3 class="category-title">Custom &amp; Wedding</h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Bespoke Celebration</span>
+                <span class="item-desc">Custom flavours &amp; design consultation</span>
+              </div>
+              <span class="item-price">POA</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Wedding Tier</span>
+                <span class="item-desc">Per tier, minimum three tiers</span>
+              </div>
+              <span class="item-price">£120+</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Petit Fours</span>
+                <span class="item-desc">Box of 12 assorted</span>
+              </div>
+              <span class="item-price">£28</span>
+            </li>
+            <li class="menu-item">
+              <div>
+                <span class="item-name">Tasting Session</span>
+                <span class="item-desc">For weddings and large events</span>
+              </div>
+              <span class="item-price">£45</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Order CTA ── -->
+  <section class="order-cta" id="order">
+    <div class="cta-decoration" aria-hidden="true">
+      <div class="deco-ring deco-ring-1"></div>
+      <div class="deco-ring deco-ring-2"></div>
+    </div>
+    <div class="cta-inner">
+      <span class="section-label reveal">Ready to Begin?</span>
+      <h2 class="cta-heading reveal">
+        Your cake<br>
+        is <em>waiting</em><br>
+        to be made.
+      </h2>
+      <div class="cta-body reveal-up">
+        <p>Each order starts with a conversation. Tell us about your occasion, your flavours, your vision — we'll handle the rest.</p>
+        <div class="cta-actions">
+          <a href="mailto:hello@mirabelle.co" class="btn-primary btn-large magnetic-btn">Start Your Order</a>
+          <span class="cta-divider">or</span>
+          <p class="cta-phone">Call us at <strong>+44 20 7946 0001</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Mirabelle</span>
+        <p>Artisan cakery, crafting moments<br>since 2019.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Pinterest</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="footer-col-title">Explore</span>
+          <a href="#collection">Collection</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">Our Story</a>
+          <a href="#order">Order</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Contact</span>
+          <a href="mailto:hello@mirabelle.co">hello@mirabelle.co</a>
+          <a href="tel:+442079460001">+44 20 7946 0001</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Visit</span>
+          <address>
+            12 Floral Street<br>
+            Covent Garden<br>
+            London, WC2E 9DH
+          </address>
+          <span class="footer-hours">Tue – Sat, 9am – 6pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Mirabelle. All rights reserved.</span>
+      <span>Made with intention.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
