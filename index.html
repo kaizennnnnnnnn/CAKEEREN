@@ -396,21 +396,108 @@
       <div class="deco-ring deco-ring-1"></div>
       <div class="deco-ring deco-ring-2"></div>
     </div>
-    <div class="cta-inner">
-      <span class="section-label reveal">Ready to Begin?</span>
-      <h2 class="cta-heading reveal">
-        Your cake<br>
-        is <em>waiting</em><br>
-        to be made.
-      </h2>
-      <div class="cta-body reveal-up">
-        <p>Each order starts with a conversation. Tell us about your occasion, your flavours, your vision — we'll handle the rest.</p>
-        <div class="cta-actions">
-          <a href="mailto:hello@mirabelle.co" class="btn-primary btn-large magnetic-btn">Start Your Order</a>
-          <span class="cta-divider">or</span>
-          <p class="cta-phone">Call us at <strong>+44 20 7946 0001</strong></p>
-        </div>
+    <div class="cta-inner cta-inner--form">
+      <div class="cta-intro">
+        <span class="section-label reveal">Ready to Begin?</span>
+        <h2 class="cta-heading reveal">
+          Your cake<br>
+          is <em>waiting</em><br>
+          to be made.
+        </h2>
+        <p class="cta-sub reveal-up">Each order starts with a conversation. Tell us about your occasion, your flavours, your vision — we'll handle the rest.</p>
       </div>
+
+      <form class="order-form reveal-up" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="order">
+        <p class="order-form__hidden" aria-hidden="true">
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="of-name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="of-name" name="name" class="form-input" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="of-email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="of-email" name="email" class="form-input" placeholder="jane@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="of-phone" class="form-label">Phone Number</label>
+            <input type="tel" id="of-phone" name="phone" class="form-input" placeholder="+44 7700 900000">
+          </div>
+          <div class="form-group">
+            <label for="of-occasion" class="form-label">Occasion <span aria-hidden="true">*</span></label>
+            <select id="of-occasion" name="occasion" class="form-input form-select" required>
+              <option value="" disabled selected>Select occasion…</option>
+              <option>Birthday</option>
+              <option>Wedding</option>
+              <option>Anniversary</option>
+              <option>Baby Shower</option>
+              <option>Corporate Event</option>
+              <option>Pet Birthday</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="of-flavour" class="form-label">Cake / Flavour <span aria-hidden="true">*</span></label>
+            <select id="of-flavour" name="flavour" class="form-input form-select" required>
+              <option value="" disabled selected>Choose a flavour…</option>
+              <option>Classic Victoria</option>
+              <option>Lemon Drizzle Layer</option>
+              <option>Raspberry &amp; Rose</option>
+              <option>Dark Chocolate Forest</option>
+              <option>Elderflower &amp; Lemon</option>
+              <option>Salted Caramel &amp; Praline</option>
+              <option>Earl Grey &amp; Citrus</option>
+              <option>Strawberry Basil</option>
+              <option>Fig &amp; Honey</option>
+              <option>Spiced Pear</option>
+              <option>Bespoke / Custom</option>
+              <option>Pet Jelly Cake</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="of-date" class="form-label">Event Date <span aria-hidden="true">*</span></label>
+            <input type="date" id="of-date" name="event_date" class="form-input" required>
+          </div>
+        </div>
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label for="of-servings" class="form-label">Number of Servings <span aria-hidden="true">*</span></label>
+            <select id="of-servings" name="servings" class="form-input form-select" required>
+              <option value="" disabled selected>Select size…</option>
+              <option>Up to 10</option>
+              <option>10 – 20</option>
+              <option>20 – 40</option>
+              <option>40 – 60</option>
+              <option>60 – 100</option>
+              <option>100+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="of-dietary" class="form-label">Dietary Requirements</label>
+            <input type="text" id="of-dietary" name="dietary" class="form-input" placeholder="e.g. gluten-free, nut-free">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="of-message" class="form-label">Special Requests / Your Vision</label>
+          <textarea id="of-message" name="message" class="form-input form-textarea" rows="4" placeholder="Tell us about colours, decorations, inscriptions, or any other details…"></textarea>
+        </div>
+
+        <div class="form-footer">
+          <p class="form-note">We'll reply within 24 hours · Minimum 72h lead time required</p>
+          <button type="submit" class="btn-primary btn-large magnetic-btn form-submit">Send My Order →</button>
+        </div>
+      </form>
     </div>
   </section>
 

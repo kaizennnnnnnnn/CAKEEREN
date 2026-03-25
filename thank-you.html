@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Received — Mirabelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .thankyou-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: var(--bg-3);
+    }
+    .thankyou-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .thankyou-label {
+      font-size: 0.8125rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .thankyou-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .thankyou-heading em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .thankyou-body {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 420px;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <main class="thankyou-page">
+    <div class="thankyou-icon" aria-hidden="true">🎂</div>
+    <span class="thankyou-label">Order Received</span>
+    <h1 class="thankyou-heading">
+      Thank you<br>for your <em>order.</em>
+    </h1>
+    <p class="thankyou-body">
+      We've received your request and will be in touch within 24 hours to confirm the details and discuss your vision. We can't wait to bake for you.
+    </p>
+    <a href="/" class="btn-primary magnetic-btn">Back to Mirabelle →</a>
+  </main>
+</body>
+</html>
