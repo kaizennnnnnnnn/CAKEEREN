@@ -731,7 +731,7 @@ body {
 /* Responsive */
 @media (max-width: 640px) {
   .pets-video {
-    object-position: 85% top;
+    object-position: 75% top;
   }
 
   .pets-panel {
@@ -1664,7 +1664,7 @@ body {
 
   /* Pets section */
   .pets-video {
-    object-position: 85% top;
+    object-position: 75% top;
   }
 
   .pets-panel {
